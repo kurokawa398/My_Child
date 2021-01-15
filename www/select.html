@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+  <script src="js/select.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/click.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+
+  <!--css-->
+  <link rel="stylesheet" href="css/shop.css">
+
+
+  <script>
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+
+</head>
+<body>
+  <audio id = "select2se" src="./se/select2.mp3"></audio>
+  <div id = "center">ジャンル選択</div>
+  <a id ="back" href="./home.html" class="btn-real">
+    <i class="fa fa-arrow-left"></i>
+  </a>
+  <div class="area" >
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  
+  <div id="scroll">
+    <a  id = "algorithm" class = "type btn-emboss"  style="width:85%;height:60px" >アルゴリズム</a>
+    <a  id = "program" class = "type btn-emboss"  style="width:85%;height:60px" >ハード・ソフトウェア</a>
+    <a  id = "database" class = "type btn-emboss"  style="width:85%;height:60px" >データベース</a>
+    <a  id = "network" class = "type btn-emboss"  style="width:85%;height:60px" >ネットワーク</a>
+    <a  id = "security" class = "type btn-emboss"  style="width:85%;height:60px" >セキュリティ</a>
+    <a  id = "development" class = "type btn-emboss"  style="width:85%;height:60px" >システム開発技術</a>
+  </div>  
+</body>
+</html>

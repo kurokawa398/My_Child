@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*赤ちゃん*/
+
+.babyAll{
+  position: relative;
+  margin: 0 auto;
+}
+
+.baby {
+  width: 100%;
+  height: 50%;
+  padding-top: 90%;
+  padding-right: 20%;
+}
+
+/*右腕*/
+.baby2 {
+  width: 70%;
+  height: 60%;
+}
+
+/*左腕*/
+.baby3 {
+  width: 70%;
+  height: 50%;
+}
+
+/*右腕*/
+.swing {
+  position: absolute;
+  top:56%; 
+  left:6%;  
+  animation: swing linear 3s infinite;
+}
+
+/*左腕*/
+.swing2 {
+  position: absolute;
+  top:57%;
+  left: 10%;
+  animation: swing2 linear 2s infinite;
+}
+
+/*右腕*/
+@keyframes swing{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/*左腕*/
+@keyframes swing2{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(4deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+  @media screen and  (max-height: 2436px) and (min-height: 768px) {
+
+    .baby {
+    width: 100%;
+    height: 50%;
+    padding-top: 120%;
+    padding-right: 20%;
+  }
+
+  /*右腕*/
+  .swing {
+    position: absolute;
+    top:63%; 
+    left:6%;  
+    animation: swing linear 3s infinite;
+  }
+
+  /*左腕*/
+  .swing2 {
+    position: absolute;
+    top:64%;
+    left: 10%;
+    animation: swing2 linear 2s infinite;
+  }
+}

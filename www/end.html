@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/end.css">
+
+
+    <script> 
+    var application_key = "9cf230addad94f99ecfc7f4992bd9e111df0576aff15cc03ff5ab7c0c0de4913";
+    var client_key = "c7cb021c663553edafdca2a7629d396ec49dab6c76dbfd4f880eeec09a3999e0";
+    var ncmb = new NCMB(application_key, client_key);
+    var Playerdata = ncmb.DataStore("playerdata");
+    var playerdata = new Playerdata();
+      var tap = false;
+      document.addEventListener( 'DOMContentLoaded', function(){
+        var end = document.getElementById("end");
+        var volume = 0.2;
+        end.volume = 0.2;
+        end.play();
+        var time = 0;
+        var time = setInterval(function(){
+          time++;
+          if(time > 225){
+            volume -= 0.01;
+            if(volume >= 0){
+              end.volume = volume;
+            }           
+          }
+          if(volume < 0){
+            tap = true;
+            end.pause();
+            clearInterval(time);
+            setTimeout(function(){
+              window.location.href = 'index.html';
+            }, 1*1000);
+          }
+        },500);
+        
+        Playerdata.fetchAll()
+         .then(function(results){
+            results[0].delete();
+        })
+      })
+    </script>
+</head>
+<body id ="tap">
+  <audio id = "end" src="./se/end.mp3"></audio>
+  <div id="movie">
+		<div class="roll-text">
+      <div id = "logo">
+          <img src="./img/title/logo2.png" width="100%">
+      </div>
+      企画
+      石井裕也
+      黑川貴裕
+      齋藤春花
+      廣田幸一
+      <br>
+      キャラクターデザイン/原画
+      齋藤春花
+      <br>
+      タイトルロゴデザイン
+      齋藤春花
+      <br>
+      プログラム
+      石井裕也
+      黑川貴裕
+      齋藤春花
+      廣田幸一
+      <br>
+      スクリプト
+      石井裕也
+      黑川貴裕
+      廣田幸一
+      <br>
+      モーションデザイン
+      廣田幸一
+      <br>
+      アニメーション制作
+      廣田幸一
+      <br>
+      サウンドエフェクト
+      黑川貴裕
+      <br>
+      デバッグ・テストプレイ
+      黑川貴裕
+      <br>
+      作画監督
+      齋藤春花
+      <br>
+      仕上げ
+      石井裕也
+      黑川貴裕
+      齋藤春花
+      廣田幸一
+      <br>
+      エンディングテーマ
+      曲名「君が見た世界 」
+      作曲 Enju
+      <br>
+      スペシャルサンクス
+      (50音順)
+      岩田真輝
+      宇野俊希
+      <br>
+      　THANK YOU FOR PLAYING
+    </div>
+  </div>
+</body>
+</html>

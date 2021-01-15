@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+#home {
+  clip-path: url(#cache);
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; 
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 6;
+  stroke-miterlimit:10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;    
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+ }
+    }
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+ }
+  50% {
+    opacity: 0.2;
+ }
+  100% {
+    opacity: 0.15;
+ }
+    }
+
+#anime{
+  height: 150%;
+}
+
+#logo{
+  position: absolute;
+  width: 100%;
+  top: -12%;
+  left:53%;
+  transform: translateX(-50%);
+}
+
+#baby{
+  position: absolute;
+  bottom: 20%;
+  left : -17%;
+}
+
+#moji{
+  position: absolute;
+  bottom: 12%;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-size: 26px;
+  animation: flash 2s linear infinite;
+}
+
+
+
+@keyframes flash {
+  0%,100% {
+    opacity: 1;
+  }
+
+  50%{
+    opacity: 0;
+  }
+}

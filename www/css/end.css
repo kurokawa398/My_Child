@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+	background-color:black;
+	font-family: 'Kosugi Maru', sans-serif;
+}
+#logo{
+  position: absolute;
+  top: -10%;
+  margin-top: 0%;
+  padding-top: 0%;
+  border-top: 0%;   
+  margin-right: 20%;
+}
+#movie{
+  margin-top:35%;
+	width : 100%;
+	height : 400px;
+	overflow:hidden;
+	position:relative;
+  }
+.roll-text{
+	width: 85%;
+	text-align: center;
+	white-space : pre;
+	color:white;
+	position:absolute;
+	animation: anim-scroll-up 120s linear forwards;
+  }
+  @keyframes anim-scroll-up{
+	0% {
+    top: 100%;
+    transform: translateY(0);
+  }
+  100% {
+    top: 0;
+    transform: translateY(-100%);
+  }
+}
